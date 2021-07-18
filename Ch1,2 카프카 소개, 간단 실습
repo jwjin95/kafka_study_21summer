@@ -66,7 +66,7 @@ KAFKA_HEAP_OPTS는 kafka-server-start.sh 내에서 불러옴
 
 jps 실행 모습
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f7c98912-a94d-4328-bd48-48a4a90dabec/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103638Z&X-Amz-Expires=86400&X-Amz-Signature=c97d1642ad9e401947ab7bb25ae055a9f2dbfe77ff6e67ecf0bc1a01fff24739&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled.png)
 
 ### 로컬 컴퓨터에서 카프카와 통신 - 카프카 커맨드 라인 툴
 
@@ -84,13 +84,13 @@ jps 실행 모습
 
 `bin/kafka-topics.sh --bootstrap-server [HOST]:9092 --list`
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%201.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%201.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fb58e04-a33f-4996-add6-8971c4fa70f6/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103825Z&X-Amz-Expires=86400&X-Amz-Signature=3f9a75f0cddfe94e0eab36fd8dcdcfde43e492a4c48f44f519feb388ebba1f9a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%201.png)
 
 - 토픽 상세 조회
 
 `bin/kafka-topics.sh --bootstrap-server [HOST]:9092 --describe --topic [TOPIC]` 
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%202.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%202.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/287586bc-61f9-4fdc-8608-eaf292c56712/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103840Z&X-Amz-Expires=86400&X-Amz-Signature=36647ef478381a389cbd823d115bfde9ccd6328925acb1d8ea292ebc8a8f4099&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%202.png)
 
 - 토픽 옵션 수정
 
@@ -102,7 +102,7 @@ hello.kafka 토픽의 파티션 4개로 변경 후 describe
 
 `bin/kafka-topics.sh --bootstrap-server [HOST]:9092 --topic hello.kafka --describe`
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%203.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%203.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1b16c29e-0652-49fe-8c2c-a1bd8a7cdf7c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103853Z&X-Amz-Expires=86400&X-Amz-Signature=881dc0e05d8a28b2487016c06cc400fe8180ae5bc583b7b4951211b2ff100978&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%203.png)
 
 retention.ms 옵션 변경
 
@@ -121,7 +121,7 @@ with Key값
 `bin/kafka-console-consumer.sh --bootstrap-server [HOST]:9092 --topic [TOPIC] 
 ( --property print.key=true --property key.separator="-" ) --group [GROUP] --from-beginning`
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%204.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%204.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7713e3b5-34d1-4247-a6aa-db03c5defdc5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103906Z&X-Amz-Expires=86400&X-Amz-Signature=5f986bd139803e10431c66a7e4079840e0396e096cbd3d4fca9f54ca8cd06f03&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%204.png)
 
 - kafka-consumer-groups.sh
 
@@ -131,7 +131,7 @@ with Key값
 
 `bin/kafka-consumer-groups.sh --bootstrap-server [HOST]:9092 --group [GROUP] --describe`
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%205.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%205.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e4f7311e-a868-4da2-8428-fd1430eaec11/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103923Z&X-Amz-Expires=86400&X-Amz-Signature=39fa1b9197de2b1b0701602b21063c9a6ea630d1f34265510faa2c9155a15dd6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%205.png)
 
 - kafka-verifiable-producer, consumer.sh
 
@@ -143,11 +143,11 @@ with Key값
 
    Producer
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%206.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%206.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0df36149-7112-4bf3-8172-0bd81d2f6643/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103937Z&X-Amz-Expires=86400&X-Amz-Signature=fc59c0cc5d029a98fd3af2aae6b02c95988013b1a8364cea51bc840243d8ce6e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%206.png)
 
 Consumer
 
-![Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%207.png](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%207.png)
+![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7dc0d0f8-b790-4092-a557-4b0210de6851/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210718%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210718T103946Z&X-Amz-Expires=86400&X-Amz-Signature=c8eaa1e4403eb2f87b7d6b46c10b66d65ab5e283be9513c560cb38ad99703436&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22](Ch1,2%20e33bad954d884a3dbc88ad56bf505133/Untitled%207.png)
 
 - bootstrap-server?
 → 카프카 버전 2.2 이후로 주키퍼 대신 카프카를 통해 토픽과 관련된 명령 실행
